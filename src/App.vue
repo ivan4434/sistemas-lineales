@@ -11,7 +11,7 @@
       ( <div v-for="(col, index2) in fila" :key="index2"><span v-if="index2 == fila.length-1">|</span><input class="w-[4rem] border-0 m-2" type="number" v-model="matriz[index][index2]"></div> )
     </div>
 
-    <div class="flex flex-row mt-5"><button class="m-2" @click="Calc.Diag(matriz)">Diagonalizar</button> <button @click="Calc.Sol(matriz)" class="m-2">Resolver</button> <button @click="Reset" class="m-2">Resetear</button></div>
+    <div class="flex flex-row mt-5"><button class="m-2" @click="Calc.Diag(matriz)">Escalonar</button> <button @click="Calc.Sol(matriz)" class="m-2">Resolver</button> <button @click="Reset" class="m-2">Resetear</button></div>
     <div class="flex flex-row" v-if="isFinite(sol[0])"><div class="ml-2" v-for="(s, index) in sol" :key="index">X{{index+1}} = {{s}}</div></div>
     <div v-else-if="sol[0] !=null">El sistema no tiene solución o tiene infinitas soluciones</div>
   </div>
